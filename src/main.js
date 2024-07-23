@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './styles/style.css'
 
 import parallax from './features/hero'
+import pin from './features/pin'
 import preloader from './features/preloader'
 
 console.log('Its working from GitHub!')
@@ -27,3 +28,7 @@ function init() {
 }
 init()
 parallax()
+let a = 100
+if (a < 500) {
+  pin()
+}
