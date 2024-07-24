@@ -12,7 +12,7 @@ function pin() {
       trigger: '.map-container',
       start: 'top 1%',
       endTrigger: '.cards-container',
-      end: 'bottom 90%',
+      end: 'bottom 99%',
     },
   })
 }

@@ -5,6 +5,7 @@ import './styles/style.css'
 
 import card_hover from './features/cards'
 import parallax from './features/hero'
+import reveal from './features/objetivos'
 import pin from './features/pin'
 import preloader from './features/preloader'
 
@@ -28,6 +29,7 @@ function init() {
   }
 }
 init()
+reveal()
 parallax()
 pin()
 card_hover()
