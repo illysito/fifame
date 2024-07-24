@@ -4,9 +4,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 function reveal() {
+  const reveal_duration = 0.8
+  gsap.to('.projects-heading', {
+    y: 0,
+    duration: reveal_duration,
+    ease: 'power1.inOut',
+    scrollTrigger: {
+      trigger: '.projects-heading',
+      start: 'top 95%',
+    },
+  })
+
   gsap.to('.colabora-heading-2', {
     y: 0,
-    duration: 1,
+    duration: reveal_duration,
     ease: 'power1.inOut',
     scrollTrigger: {
       trigger: '.colabora-heading-2',
@@ -16,7 +27,7 @@ function reveal() {
 
   gsap.to('.colabora-heading-1', {
     y: 0,
-    duration: 1,
+    duration: reveal_duration,
     ease: 'power1.inOut',
     stagger: 0.2,
     scrollTrigger: {
