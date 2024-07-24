@@ -7,7 +7,16 @@ function parallax() {
   gsap.to('.hero-wrapper', {
     y: 200,
     scrollTrigger: {
-      trigger: '.fifame-section',
+      trigger: '.main-project-section',
+      start: 'top bottom',
+      scrub: 1,
+    },
+  })
+
+  gsap.to('.main-project-section', {
+    y: 200,
+    scrollTrigger: {
+      trigger: '.projects-section',
       start: 'top bottom',
       scrub: 1,
     },
