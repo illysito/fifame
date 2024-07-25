@@ -5,6 +5,22 @@ gsap.registerPlugin(ScrollTrigger)
 
 function reveal() {
   const reveal_duration = 0.8
+  const main_project_headings = document.querySelectorAll(
+    '.main-project-heading'
+  )
+
+  main_project_headings.forEach((heading) => {
+    gsap.to(heading, {
+      y: 0,
+      duration: reveal_duration,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: heading,
+        start: 'top 95%',
+      },
+    })
+  })
+
   gsap.to('.projects-heading', {
     y: 0,
     duration: reveal_duration,

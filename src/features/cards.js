@@ -6,6 +6,7 @@ function card_hover() {
   const card_red = document.querySelector('.card-red')
   const card_yellow = document.querySelector('.card-yellow')
   const card_blue = document.querySelector('.card-blue')
+  const projects_link = document.querySelector('.proyectos-link')
 
   function hover_card_in(event) {
     const card = event.currentTarget
@@ -159,6 +160,26 @@ function card_hover() {
     })
   }
 
+  function move_link_in(event) {
+    const link = event.currentTarget
+    console.log('link:', link)
+    gsap.to('.proyectos-link', {
+      marginLeft: 5,
+      duration: 0.5,
+      ease: 'power3.out',
+    })
+  }
+
+  function move_link_out(event) {
+    const link = event.currentTarget
+    console.log('link:', link)
+    gsap.to('.proyectos-link', {
+      marginLeft: 0,
+      duration: 0.5,
+      ease: 'power3.out',
+    })
+  }
+
   cards.forEach((card) => {
     card.addEventListener('mouseenter', hover_card_in)
     card.addEventListener('mouseleave', hover_card_out)
@@ -175,6 +196,9 @@ function card_hover() {
   //
   card_blue.addEventListener('mouseenter', blue_card_in)
   card_blue.addEventListener('mouseleave', blue_card_out)
+  //
+  projects_link.addEventListener('mouseenter', move_link_in)
+  projects_link.addEventListener('mouseleave', move_link_out)
 }
 
 export default card_hover
