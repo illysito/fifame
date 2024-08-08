@@ -2,10 +2,10 @@ import { gsap } from 'gsap'
 
 function card_hover() {
   const cards = document.querySelectorAll('.card')
-  const card_green = document.querySelector('.card-green')
-  const card_red = document.querySelector('.card-red')
-  const card_yellow = document.querySelector('.card-yellow')
-  const card_blue = document.querySelector('.card-blue')
+  // const card_green = document.querySelector('.card-green')
+  // const card_red = document.querySelector('.card-red')
+  // const card_yellow = document.querySelector('.card-yellow')
+  // const card_blue = document.querySelector('.card-blue')
   const projects_link = document.querySelector('.proyectos-link')
 
   function hover_card_in(event) {
@@ -70,95 +70,95 @@ function card_hover() {
     })
   }
 
-  function red_card_in(event) {
-    const card = event.currentTarget
-    console.log('red:', card)
-    gsap.to('.map-black', {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to('.map-red', {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-  }
+  // function red_card_in(event) {
+  //   const card = event.currentTarget
+  //   console.log('red:', card)
+  //   gsap.to('.map-black', {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  //   gsap.to('.map-red', {
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  // }
 
-  function red_card_out(event) {
-    const card = event.currentTarget
-    console.log('red:', card)
-    gsap.to('.map-black', {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to('.map-red', {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
-  }
+  // function red_card_out(event) {
+  //   const card = event.currentTarget
+  //   console.log('red:', card)
+  //   gsap.to('.map-black', {
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  //   gsap.to('.map-red', {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  // }
 
-  function yellow_card_in(event) {
-    const card = event.currentTarget
-    console.log('yellow:', card)
-    gsap.to('.map-black', {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to('.map-yellow', {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-  }
+  // function yellow_card_in(event) {
+  //   const card = event.currentTarget
+  //   console.log('yellow:', card)
+  //   gsap.to('.map-black', {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  //   gsap.to('.map-yellow', {
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  // }
 
-  function yellow_card_out(event) {
-    const card = event.currentTarget
-    console.log('yellow:', card)
-    gsap.to('.map-black', {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to('.map-yellow', {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
-  }
+  // function yellow_card_out(event) {
+  //   const card = event.currentTarget
+  //   console.log('yellow:', card)
+  //   gsap.to('.map-black', {
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  //   gsap.to('.map-yellow', {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  // }
 
-  function blue_card_in(event) {
-    const card = event.currentTarget
-    console.log('blue:', card)
-    gsap.to('.map-black', {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to('.map-blue', {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-  }
+  // function blue_card_in(event) {
+  //   const card = event.currentTarget
+  //   console.log('blue:', card)
+  //   gsap.to('.map-black', {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  //   gsap.to('.map-blue', {
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  // }
 
-  function blue_card_out(event) {
-    const card = event.currentTarget
-    console.log('blue:', card)
-    gsap.to('.map-black', {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to('.map-blue', {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
-  }
+  // function blue_card_out(event) {
+  //   const card = event.currentTarget
+  //   console.log('blue:', card)
+  //   gsap.to('.map-black', {
+  //     opacity: 1,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  //   gsap.to('.map-blue', {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: 'power3.out',
+  //   })
+  // }
 
   function move_link_in(event) {
     const link = event.currentTarget
@@ -183,20 +183,19 @@ function card_hover() {
   cards.forEach((card) => {
     card.addEventListener('mouseenter', hover_card_in)
     card.addEventListener('mouseleave', hover_card_out)
+    card.addEventListener('mouseenter', green_card_in)
+    card.addEventListener('mouseleave', green_card_out)
   })
-
-  card_green.addEventListener('mouseenter', green_card_in)
-  card_green.addEventListener('mouseleave', green_card_out)
   //
-  card_red.addEventListener('mouseenter', red_card_in)
-  card_red.addEventListener('mouseleave', red_card_out)
-  //
-  card_yellow.addEventListener('mouseenter', yellow_card_in)
-  card_yellow.addEventListener('mouseleave', yellow_card_out)
-  //
-  card_blue.addEventListener('mouseenter', blue_card_in)
-  card_blue.addEventListener('mouseleave', blue_card_out)
-  //
+  // card_red.addEventListener('mouseenter', green_card_in)
+  // card_red.addEventListener('mouseleave', green_card_out)
+  // //
+  // card_yellow.addEventListener('mouseenter', green_card_in)
+  // card_yellow.addEventListener('mouseleave', green_card_out)
+  // //
+  // card_blue.addEventListener('mouseenter', green_card_in)
+  // card_blue.addEventListener('mouseleave', green_card_out)
+  // //
   projects_link.addEventListener('mouseenter', move_link_in)
   projects_link.addEventListener('mouseleave', move_link_out)
 }

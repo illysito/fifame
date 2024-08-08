@@ -22,6 +22,24 @@ function parallax() {
     },
   })
 
+  gsap.to('.colabora-hero-wrapper', {
+    y: 200,
+    scrollTrigger: {
+      trigger: '.colabora-desarrollo-section',
+      start: 'top bottom',
+      scrub: 1,
+    },
+  })
+
+  gsap.to('.colabora-hero-heading', {
+    y: 200,
+    scrollTrigger: {
+      trigger: '.colabora-desarrollo-section',
+      start: 'top bottom',
+      scrub: 1,
+    },
+  })
+
   const cards = document.querySelectorAll('.card')
 
   cards.forEach((card) => {

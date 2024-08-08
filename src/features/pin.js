@@ -10,9 +10,10 @@ function pin() {
       pinSpacing: false,
       anticipatepin: true,
       trigger: '.map-container',
-      start: 'top 1%',
+      start: 'top top',
       endTrigger: '.cards-container',
       end: 'bottom 99%',
+      markers: false,
     },
   })
 }
