@@ -8,52 +8,86 @@ function card_hover(cards) {
     const card = event.currentTarget
     const image = card.querySelector('.card-img')
     const heading = card.querySelector('.card-heading')
+    const tl = gsap.timeline()
 
-    gsap.to(image, {
-      scale: 1.05,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to(heading, {
-      x: 5,
-      ease: 'power1.inOut',
-    })
-    gsap.to(map_black, {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to(map_brown, {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
+    tl.to(
+      image,
+      {
+        scale: 1.05,
+        duration: 1,
+        ease: 'power3.out',
+      },
+      0
+    )
+      .to(
+        heading,
+        {
+          x: 5,
+          ease: 'power1.inOut',
+        },
+        0
+      )
+      .to(
+        map_black,
+        {
+          opacity: 0,
+          duration: 1,
+          ease: 'power3.out',
+        },
+        0
+      )
+      .to(
+        map_brown,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+        },
+        0
+      )
   }
 
   function hover_card_out(event) {
     const card = event.currentTarget
     const image = card.querySelector('.card-img')
     const heading = card.querySelector('.card-heading')
+    const tl = gsap.timeline()
 
-    gsap.to(image, {
-      scale: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to(heading, {
-      x: 0,
-      ease: 'power1.inOut',
-    })
-    gsap.to(map_black, {
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-    })
-    gsap.to(map_brown, {
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-    })
+    tl.to(
+      image,
+      {
+        scale: 1,
+        duration: 1,
+        ease: 'power3.out',
+      },
+      0
+    )
+      .to(
+        heading,
+        {
+          x: 0,
+          ease: 'power1.inOut',
+        },
+        0
+      )
+      .to(
+        map_black,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+        },
+        0
+      )
+      .to(
+        map_brown,
+        {
+          opacity: 0,
+          duration: 1,
+          ease: 'power3.out',
+        },
+        0
+      )
   }
 
   cards.forEach((card) => {

@@ -23,16 +23,16 @@ function landing_parallax(cards) {
   //   },
   // })
 
-  // cards.forEach((card) => {
-  //   gsap.to(card, {
-  //     y: 20,
-  //     scrollTrigger: {
-  //       trigger: card,
-  //       start: 'bottom 40%',
-  //       scrub: 1.5,
-  //     },
-  //   })
-  // })
+  cards.forEach((card) => {
+    gsap.to(card, {
+      y: 20,
+      scrollTrigger: {
+        trigger: card,
+        start: 'bottom 40%',
+        scrub: 1.5,
+      },
+    })
+  })
 }
 
 export default landing_parallax
