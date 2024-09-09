@@ -24,6 +24,10 @@ const cards = document.querySelectorAll('.card')
 
 //------------ FUNCTIONS ------------//
 
+function isPC() {
+  return window.innerWidth > 991
+}
+
 function init() {
   // Check if the preloader has been shown before
   const preloaderShown = localStorage.getItem('preloaderShown')
@@ -39,8 +43,13 @@ function init() {
 }
 
 function runHomePageFunctions() {
-  landing_parallax(cards)
-  card_hover(cards)
+  if (isPC()) {
+    landing_parallax(cards)
+    card_hover(cards)
+    pin()
+  } else {
+    console.log('No scripts are running in mobile version of landing page')
+  }
 }
 
 //---------- MAIN -------------//
@@ -52,4 +61,3 @@ if (body.classList.contains('body-home')) {
   console.log('HOME')
   runHomePageFunctions()
 }
-pin()

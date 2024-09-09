@@ -4,7 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 function landing_parallax(cards) {
-  gsap.to('.hero-wrapper', {
+  const hero_wrapper = document.querySelector('.hero-wrapper')
+  gsap.to(hero_wrapper, {
     y: 200,
     scrollTrigger: {
       trigger: '.main-project-section',
@@ -13,7 +14,6 @@ function landing_parallax(cards) {
     },
   })
 
-  console.log(cards)
   // gsap.to('.main-project-section', {
   //   y: 200,
   //   scrollTrigger: {

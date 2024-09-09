@@ -4,7 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 function pin() {
-  gsap.to('.map-container', {
+  const map = document.querySelector('.map-container')
+  gsap.to(map, {
     scrollTrigger: {
       pin: true,
       // pinSpacing: false,

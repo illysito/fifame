@@ -12,6 +12,10 @@ function parallax() {
   const colabora_hero_heading = document.querySelector('.colabora-hero-heading')
   const colabora_page = document.querySelector('.colabora-desarrollo-section')
 
+  function isPC() {
+    return window.innerWidth > 991
+  }
+
   if (project_hero) {
     gsap.to(project_hero, {
       y: 200,
@@ -35,23 +39,44 @@ function parallax() {
   }
 
   if (colabora_hero) {
-    gsap.to(colabora_hero, {
-      y: 200,
-      scrollTrigger: {
-        trigger: colabora_page,
-        start: 'top bottom',
-        scrub: 1,
-      },
-    })
+    if (isPC()) {
+      gsap.to(colabora_hero, {
+        y: 200,
+        scrollTrigger: {
+          trigger: colabora_page,
+          start: 'top bottom',
+          scrub: 1,
+        },
+      })
 
-    gsap.to(colabora_hero_heading, {
-      y: 200,
-      scrollTrigger: {
-        trigger: colabora_page,
-        start: 'top bottom',
-        scrub: 1,
-      },
-    })
+      gsap.to(colabora_hero_heading, {
+        y: 200,
+        scrollTrigger: {
+          trigger: colabora_page,
+          start: 'top bottom',
+          scrub: 1,
+        },
+      })
+    } else {
+      gsap.to(colabora_hero, {
+        y: 200,
+        scrollTrigger: {
+          trigger: colabora_page,
+          start: 'top 75%',
+          scrub: 1,
+          markers: false,
+        },
+      })
+
+      gsap.to(colabora_hero_heading, {
+        y: 200,
+        scrollTrigger: {
+          trigger: colabora_page,
+          start: 'top 75%',
+          scrub: 1,
+        },
+      })
+    }
   } else {
     console.log(' ')
   }
