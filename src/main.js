@@ -3,8 +3,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import './styles/style.css'
 
-import card_hover from './features/cards'
-import parallax from './features/hero'
+// import parallax from './features/hero'
+import card_hover from './features/landing/cards'
+import landing_parallax from './features/landing/landing_parallax'
 import reveal from './features/objetivos'
 import pin from './features/pin'
 import preloader from './features/preloader'
@@ -12,6 +13,11 @@ import preloader from './features/preloader'
 console.log('Its working from GitHub!')
 
 gsap.registerPlugin(ScrollTrigger)
+
+//------------ QUERYS --------------//
+
+const cards = document.querySelectorAll('.card')
+const body = document.body
 
 //------------ FUNCTIONS ------------//
 
@@ -28,8 +34,18 @@ function init() {
     document.querySelector('.preloader-section').style.display = 'none'
   }
 }
+
+function runHomePageFunctions() {
+  landing_parallax(cards)
+  card_hover(cards)
+}
+
+//---------- MAIN -------------//
 init()
 reveal()
-parallax()
+// parallax()
+if (body.classList.contains('body-home')) {
+  console.log('HOME')
+  runHomePageFunctions()
+}
 pin()
-card_hover()

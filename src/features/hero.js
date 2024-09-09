@@ -22,6 +22,24 @@ function parallax() {
     },
   })
 
+  gsap.to('.projects-hero-wrapper', {
+    y: 200,
+    scrollTrigger: {
+      trigger: '.projects-page-section',
+      start: 'top bottom',
+      scrub: 1,
+    },
+  })
+
+  gsap.to('.projects-hero-heading', {
+    y: 600,
+    scrollTrigger: {
+      trigger: '.projects-page-section',
+      start: 'top bottom',
+      scrub: 1,
+    },
+  })
+
   gsap.to('.colabora-hero-wrapper', {
     y: 200,
     scrollTrigger: {
