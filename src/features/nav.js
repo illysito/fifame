@@ -2,23 +2,23 @@ import { gsap } from 'gsap'
 
 function nav(dropdown, clicker) {
   let isDropped = false
-  gsap.set(dropdown, {
-    yPercent: -150,
-  })
+  // gsap.set(dropdown, {
+  //   yPercent: -150,
+  // })
   function dropdown_menu() {
     if (!isDropped) {
       console.log('isDropped: ' + isDropped)
       gsap.to(dropdown, {
-        yPercent: 0,
+        yPercent: 150,
         ease: 'power3.inOut',
-        duration: 1,
+        duration: 0.8,
       })
     } else {
       console.log('isDropped: ' + isDropped)
       gsap.to(dropdown, {
-        yPercent: -150,
+        yPercent: 0,
         ease: 'power3.inOut',
-        duration: 1,
+        duration: 0.8,
       })
     }
     isDropped = !isDropped
