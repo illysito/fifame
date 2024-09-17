@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import './styles/style.css'
 
+import blog from './features/blog'
 import card_hover from './features/landing/cards'
 import landing_parallax from './features/landing/landing_parallax'
 import nav from './features/nav'
@@ -57,6 +58,7 @@ init()
 nav(nav_dropdown, clicker)
 reveal()
 parallax()
+blog()
 if (body.classList.contains('body-home')) {
   console.log('HOME')
   runHomePageFunctions()
