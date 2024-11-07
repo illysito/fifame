@@ -12,6 +12,10 @@ function parallax() {
   const colabora_hero_heading = document.querySelector('.colabora-hero-heading')
   const colabora_page = document.querySelector('.colabora-desarrollo-section')
 
+  const cif_hero = document.querySelector('.cif-hero-wrapper')
+  const cif_hero_heading = document.querySelector('.cif-hero-heading')
+  const cif_page = document.querySelector('.cif-page-section')
+
   function isPC() {
     return window.innerWidth > 991
   }
@@ -30,6 +34,28 @@ function parallax() {
       y: 600,
       scrollTrigger: {
         trigger: project_page,
+        start: 'top bottom',
+        scrub: 1,
+      },
+    })
+  } else {
+    console.log(' ')
+  }
+
+  if (cif_hero) {
+    gsap.to(cif_hero, {
+      y: 100,
+      scrollTrigger: {
+        trigger: cif_page,
+        start: 'top bottom',
+        scrub: 1,
+      },
+    })
+
+    gsap.to(cif_hero_heading, {
+      y: 300,
+      scrollTrigger: {
+        trigger: cif_page,
         start: 'top bottom',
         scrub: 1,
       },
